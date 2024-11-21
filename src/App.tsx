@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Inject, ScheduleComponent, Day, EventSettingsModel, TimelineMonth, ViewDirective, ViewsDirective, HeaderRowsDirective, HeaderRowDirective, CellTemplateArgs, getWeekNumber, TimelineViews } from '@syncfusion/ej2-react-schedule';
+import { Inject, ScheduleComponent, Day, EventSettingsModel, TimelineMonth, ViewDirective, ViewsDirective, 
+  HeaderRowsDirective, HeaderRowDirective, CellTemplateArgs, getWeekNumber, TimelineViews, getStartEndHours } from '@syncfusion/ej2-react-schedule';
 import { data } from './data';
 
 class App extends React.Component {
@@ -15,7 +16,7 @@ class App extends React.Component {
       <span>{this.getWeekDetails(data)}</span>
     )
   }
-  private getWeekDetails(value: CellTemplateArgs) : string {
+  private getWeekDetails(value: CellTemplateArgs): string {
     return 'Week ' + getWeekNumber((value as CellTemplateArgs).date);
   }
   public render() {
